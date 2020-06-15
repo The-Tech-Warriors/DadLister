@@ -1,8 +1,6 @@
-package com.codeup.adlister.dao;
+package com.codeup.DadLister.dao;
 
-import com.codeup.adlister.models.User;
-
-import java.util.List;
+import com.codeup.DadLister.models.User;
 
 public interface Users {
     User findByUsername(String username);

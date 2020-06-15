@@ -1,7 +1,7 @@
-package com.codeup.adlister.controllers;
+package com.codeup.DadLister.controllers;
 
-import com.codeup.adlister.dao.DaoFactory;
-import com.codeup.adlister.models.User;
+import com.codeup.DadLister.dao.DaoFactory;
+import com.codeup.DadLister.models.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
