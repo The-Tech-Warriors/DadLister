@@ -1,6 +1,7 @@
 package com.codeup.DadLister.models;
 
 import com.codeup.DadLister.util.Password;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class User {
     private long id;

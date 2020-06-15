@@ -29,11 +29,22 @@ CREATE USER 'admin'@'DadLister_db' IDENTIFIED BY 'codeup';
 GRANT ALL ON *.* TO 'admin'@'DadLister_db';
 
 INSERT INTO users (username, email, password) VALUES ('Admin', 'admin@gmail.com', 'codeup');
-
-show databases;
-show tables;
+SELECT * FROM users;
 
 ALTER TABLE users ADD UNIQUE (username, email);
+
+CREATE TABLE category (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE ads_category (
+    ads_id INTEGER UNSIGNED NOT NULL,
+    category_id INTEGER UNSIGNED NOT NULL,
+    FOREIGN KEY (ads_id) REFERENCES ads(id),
+    FOREIGN KEY (category_id) REFERENCES category(id)
+);
 
 
 
