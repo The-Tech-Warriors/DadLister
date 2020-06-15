@@ -11,6 +11,8 @@
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
     </div>
-
+    <form action="/ads/create">
+        <input type="submit" class="btn btn-primary btn-block" value="Create Ad">
+    </form>
 </body>
 </html>

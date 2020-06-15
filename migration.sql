@@ -45,9 +45,3 @@ CREATE TABLE ads_category (
     FOREIGN KEY (ads_id) REFERENCES ads(id),
     FOREIGN KEY (category_id) REFERENCES category(id)
 );
-
-
-
-
-
-
