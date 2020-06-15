@@ -1,4 +1,6 @@
-USE adlister_db;
+USE dadlister_db;
+
+create database if not exists dadlister_db;
 
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS users;
@@ -19,4 +21,15 @@ CREATE TABLE ads (
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
         ON DELETE CASCADE
+
+
 );
+
+show databases;
+
+show tables;
+
+
+
+
+
