@@ -25,9 +25,12 @@ CREATE TABLE ads (
 
 );
 
-show databases;
+CREATE USER 'admin'@'DadLister_db' IDENTIFIED BY 'codeup';
+GRANT ALL ON *.* TO 'admin'@'DadLister_db';
 
+show databases;
 show tables;
+
 
 
 
