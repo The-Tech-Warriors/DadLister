@@ -28,6 +28,8 @@ CREATE TABLE ads (
 CREATE USER 'admin'@'DadLister_db' IDENTIFIED BY 'codeup';
 GRANT ALL ON *.* TO 'admin'@'DadLister_db';
 
+INSERT INTO users (username, email, password) VALUES ('Admin', 'admin@gmail.com', 'codeup');
+
 show databases;
 show tables;
 
