@@ -33,6 +33,8 @@ INSERT INTO users (username, email, password) VALUES ('Admin', 'admin@gmail.com'
 show databases;
 show tables;
 
+ALTER TABLE users ADD UNIQUE (username, email);
+
 
 
 
