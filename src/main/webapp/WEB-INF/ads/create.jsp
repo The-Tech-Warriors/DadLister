@@ -20,12 +20,12 @@
             <div class="form-group">
                 <label for="category">Category</label>
                 <select name="category" id="category">
-                    <option value="home-improvement">Help It's Broken</option>
-                    <option value="auto">Motor Moments</option>
-                    <option value="bbq">BBQ Banter</option>
-                    <option value="ask-the-old-man">Wise Old Man</option>
-                    <option value="sports">Sport Stuff</option>
-                    <option value="tuff-stuff">Tuff Stuff</option>
+                    <option value="category_id">Help It's Broken</option>
+                    <option value="category_id">Motor Moments</option>
+                    <option value="category_id">BBQ Banter</option>
+                    <option value="category_id">Wise Old Man</option>
+                    <option value="category_id">Sport Stuff</option>
+                    <option value="category_id">Tuff Stuff</option>
                 </select>
             </div>
             <input type="submit" class="btn btn-block btn-primary">
