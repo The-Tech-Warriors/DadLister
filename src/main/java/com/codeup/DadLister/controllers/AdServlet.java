@@ -16,8 +16,8 @@ import static java.lang.Long.parseLong;
 @WebServlet(name = "controllers.AdsServlet", urlPatterns = "/ads/ad")
 public class AdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        long ad = parseLong(request.getParameter("dad-ad"));
-        Ad id = DaoFactory.getAdsDao().findOne(7);
+        long ad = parseLong(request.getParameter("daddy_id"));
+        Ad id = DaoFactory.getAdsDao().findOne(ad);
 
         request.setAttribute("ad" , id);
         request.getRequestDispatcher("/WEB-INF/ads/ad.jsp").forward(request, response);
