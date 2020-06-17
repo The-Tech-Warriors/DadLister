@@ -16,6 +16,5 @@
     <form class="text-center" action="/ads/create">
         <input type="submit" class="btn create-btn" value="Create Ad">
     </form>
-    </div>
 </body>
 </html>
