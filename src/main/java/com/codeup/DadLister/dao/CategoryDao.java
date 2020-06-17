@@ -53,7 +53,16 @@ public class CategoryDao implements Categories {
 
     @Override
     public List<Category> category() {
-        return null;
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM category order by id");
+            ResultSet rs = stmt.executeQuery();
+            return createCategoriesFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+
+
     }
 
     @Override
