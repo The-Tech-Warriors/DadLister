@@ -33,6 +33,7 @@
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
             <p><a href="/ads/ad?daddy_id=${ad.id}">View Ad</a></p>
+            <button type="submit">Edit or Delete (d)Ad</button>
         </div>
     </c:forEach>
 

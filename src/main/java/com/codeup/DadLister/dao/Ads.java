@@ -12,6 +12,8 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
 
+    Ad deleteAd(long id);
+
 //    void update(Ad ad); // update an existing record
 //    void destroy(Ad ad); // remove a record
 }
