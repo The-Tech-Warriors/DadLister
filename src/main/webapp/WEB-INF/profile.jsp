@@ -16,9 +16,6 @@
     <form class="text-center" action="/ads/create">
         <input type="submit" class="btn create-btn" value="Create Ad">
     </form>
-<<<<<<< HEAD
 
-=======
->>>>>>> d33420875ef6055fdf413e935101a66f16cb7fbb
 </body>
 </html>
