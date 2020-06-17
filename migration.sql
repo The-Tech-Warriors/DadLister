@@ -47,3 +47,5 @@ CREATE TABLE ads_category (
 );
 
 INSERT INTO category (name) VALUES ('help'), ('motor'), ('bbq'), ('wisdom'), ('sports'), ('tuff');
+
+select * from ads_category where category_id = 1;
