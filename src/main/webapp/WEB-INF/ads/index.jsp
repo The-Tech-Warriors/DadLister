@@ -12,6 +12,22 @@
 <div class="container">
     <h1>Here Are all the ads!</h1>
 
+    <%--Dropdown form to filter categories--%>
+    <form>
+        <div class="form-group">
+            <label for="category">Filter by Category</label>
+            <select name="category" id="category">
+                <option value="1">Help It's Broken</option>
+                <option value="2">Motor Moments</option>
+                <option value="3">BBQ Banter</option>
+                <option value="4">Wise Old Man</option>
+                <option value="5">Sport Stuff</option>
+                <option value="6">Tuff Stuff</option>
+            </select>
+        </div>
+    </form>
+
+
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
             <h2>${ad.title}</h2>
@@ -19,6 +35,8 @@
             <p><a href="/ads/ad?daddy_id=${ad.id}">View Ad</a></p>
         </div>
     </c:forEach>
+
+
 </div>
 
 </body>

@@ -12,6 +12,7 @@
     <title>Dad Ad</title>
 </head>
 <body>
+
 <h1>Test</h1>
 <c:out value="${ad.title}"/>
 <c:out value="${ad.description}"/>
