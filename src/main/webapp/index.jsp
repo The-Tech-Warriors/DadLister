@@ -10,10 +10,14 @@
     </head>
 <body>
 <%--    <jsp:include page="/WEB-INF/partials/navbar.jsp" />--%>
-    <style><%@include file="/WEB-INF/css/dadlister.css"%></style>
+    <style><%@include file="/css/dadlister.css"%></style>
 
-    <div class="container text-center">
+
+
+    <div class="container head-container text-center">
         <h1>Welcome to the Dadlister!</h1>
+
+
         <form action="/register">
             <a href="/register"><input type="submit" class="btn btn-light" value="Sign Me Up!"></a>
         </form>

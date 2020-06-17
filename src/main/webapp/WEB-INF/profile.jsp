@@ -7,12 +7,15 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+    <style><%@include file="/css/dadlister.css"%></style>
 
-    <div class="container">
+    <div class="container text-center create-container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
     </div>
-    <form action="/ads/create">
-        <input type="submit" class="btn btn-primary btn-block" value="Create Ad">
+
+    <form class="text-center" action="/ads/create">
+        <input type="submit" class="btn create-btn" value="Create Ad">
     </form>
+    </div>
 </body>
 </html>

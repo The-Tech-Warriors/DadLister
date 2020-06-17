@@ -1,0 +1,56 @@
+body {
+    background: #c23e09;
+    background-image: url("DadLister.png");
+}
+h1 {
+color: white;
+}
+
+.head-container {
+
+    margin-top: 400px;
+    color: white;
+
+}
+.login-container {
+    margin-top: 200px;
+}
+
+.register-container {
+    margin-top: 200px;
+}
+
+
+
+.username {
+    color: white;
+}
+
+.email {
+    color: white;
+}
+
+.password{
+    color: white;
+}
+
+.confirm {
+    color: white;
+}
+
+.btn{
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.52) 2px 2px 2px 2px;
+}
+
+.create-btn {
+   margin-top: 500px;
+}
+
+.card {
+    justify-content: center;
+    align-content: center;
+}
+
