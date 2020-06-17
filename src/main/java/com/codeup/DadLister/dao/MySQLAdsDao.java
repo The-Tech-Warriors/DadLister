@@ -56,6 +56,24 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    //This is how we extract ads for the profile ads
+    public List<Ad> findAdsForProfileByUserId(long id) {
+        PreparedStatement stmt = null;
+        String query = "SELECT * FROM ads " +
+                " LEFT JOIN users AS s ON ads.user_id = s.id" +
+                " LEFT JOIN ads_category AS ac ON ac.ads_id = ads.id" +
+                " LEFT JOIN category AS cat ON ac.category_id = cat.id" +
+                " WHERE ads.user_id = ?";
+        try {
+            stmt = connection.prepareStatement(query);
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
     @Override
     public Long insert(Ad ad) {
         try {

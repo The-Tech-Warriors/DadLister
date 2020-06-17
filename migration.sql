@@ -49,3 +49,9 @@ CREATE TABLE ads_category (
 INSERT INTO category (name) VALUES ('help'), ('motor'), ('bbq'), ('wisdom'), ('sports'), ('tuff');
 
 select * from ads_category where category_id = 1;
+
+# Example of using hardcoded values for mySQL to retrieve profile view ads
+SELECT * FROM ads LEFT JOIN users AS s ON ads.user_id = s.id
+                  LEFT JOIN ads_category AS ac ON ac.ads_id = ads.id
+                  LEFT JOIN category AS cat ON ac.category_id = cat.id
+                  WHERE ads.user_id = 2;

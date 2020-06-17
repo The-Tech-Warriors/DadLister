@@ -23,8 +23,9 @@ public class ViewProfileServlet extends HttpServlet {
 
         long profileId = profile.getId();
 
-        //need a dao method to access the database with user ID
-        request.setAttribute("ads", DaoFactory.getAdsDao(). //method acces to DB with (profileId)
+        //need a dao method to access the database with user ID, the findAdsForProfileByUserId is in the MySQLDao and
+        // grab it from the database
+        request.setAttribute("ads", DaoFactory.getAdsDao().findAdsForProfileByUserId(profileId));
         request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }
 }
