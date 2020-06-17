@@ -20,8 +20,6 @@ public class ShowAdServlet extends HttpServlet {
 
         String adDetails = request.getParameter("ad");
         out.println(adDetails);
-
-
     }
 
 }
