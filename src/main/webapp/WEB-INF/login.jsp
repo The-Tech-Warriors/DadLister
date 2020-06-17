@@ -7,18 +7,19 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div class="container">
+    <style><%@include file="/css/dadlister.css"%></style>
+    <div class="container login-container">
         <h1>Please Log In</h1>
         <form action="/login" method="POST">
             <div class="form-group">
-                <label for="username">Username</label>
+                <label class="username" for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
+                <label class="password" for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password">
             </div>
-            <input type="submit" class="btn btn-primary btn-block" value="Log In">
+            <input type="submit" class="btn btn-secondary btn-block" value="Log In">
         </form>
     </div>
 </body>
