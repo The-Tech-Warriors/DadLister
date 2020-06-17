@@ -16,6 +16,7 @@
         <div class="col-md-6">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
+            <p><a id="dad-ad" href="${pageContext.request.contextPath}/ads/ad">View Ad ${ad.id}</a></p>
         </div>
     </c:forEach>
 </div>
