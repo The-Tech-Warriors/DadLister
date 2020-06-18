@@ -13,11 +13,11 @@
         <form action="/ads/create" method="post">
             <div class="form-group">
                 <label class="title" for="title">Title</label>
-                <input id="title" name="title" class="form-control" type="text">
+                <input id="title" name="title" class="form-control" type="text" required>
             </div>
             <div class="form-group">
                 <label class="description" for="description">Description</label>
-                <textarea id="description" name="description" class="form-control" type="text"></textarea>
+                <textarea id="description" name="description" class="form-control" type="text" required></textarea>
             </div>
             <div class="form-group">
                 <label class="category" for="category">Category</label>
