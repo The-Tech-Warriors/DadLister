@@ -20,7 +20,7 @@ public interface Ads {
 
     Ad deleteAd(long id);
 
-    List<Ad> adByID(long id);
+    List<Ad> adByID(long ads_id);
 
 
 //    void update(Ad ad); // update an existing record

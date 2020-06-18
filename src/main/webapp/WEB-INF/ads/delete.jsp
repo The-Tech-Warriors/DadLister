@@ -30,6 +30,7 @@
 <c:out value="${ad.description}"/>
 </p>
 <br>
+<%--<a href="${deletelink}">Delete</a>--%>
 <a href="${templink}" onclick="if (!(confirm('Are you sure you want to delete this student?'))) return false">Delete</a>
 <%--<button type="submit">Delete Post</button>--%>
 </body>
