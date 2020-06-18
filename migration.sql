@@ -61,13 +61,3 @@ VALUES ('help'),
        ('sports'),
        ('tuff');
 
-select *
-from ads_category
-where category_id = 1;
-
-SELECT *
-FROM ads
-         left join users u on ads.user_id = u.id
-         left join ads_category ac on ads.id = ac.ads_id
-         left join category c on ac.category_id = c.id
-WHERE category_id = 1;

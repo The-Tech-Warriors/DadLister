@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -43,6 +44,7 @@
 
 
 
+
 <%--ads card--%>
 
     <div class="ad-cards-container">
@@ -78,6 +80,7 @@
 
     </div>
     </div>
+
 
 </body>
 </html>
