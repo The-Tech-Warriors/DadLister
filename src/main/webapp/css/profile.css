@@ -64,6 +64,7 @@ h1 {
     width:20em;
     padding:1em 2em;
     position:Absolute;
+    top:0px;
     -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -80,6 +81,7 @@ h1 {
     height:20em;
     width:20em;
     position:absolute;
+    bottom:0em;
     -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
