@@ -8,7 +8,7 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<style><%@include file="/css/dadlister.css"%></style>
+<style><%@include file="/css/AllAds.css"%></style>
 
 <div class="container">
     <h1>Here Are all the ads!</h1>
@@ -21,6 +21,9 @@
         </div>
     </c:forEach>
 </div>
+
+
+
 
 </body>
 </html>
