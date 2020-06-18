@@ -18,5 +18,55 @@
 <c:out value="${ad.title}"/>
 <c:out value="${ad.description}"/>
 
+
+<%--Card--%>
+<div id="container">
+
+    <!-- Start	Product details -->
+    <div class="product-details">
+
+        <!-- 	Product Name -->
+        <h1> Dad Name</h1>
+
+        <!-- The most important information about the product -->
+        <p class="information">"AD INFO HERE</p>
+
+
+
+        <!-- 		Control -->
+        <div class="control">
+
+            <!-- Start Button buying -->
+            <button class="btn">
+                <span class="schedule">Schedule Now</span>
+            </button>
+            <!-- End Button buying -->
+
+        </div>
+
+    </div>
+
+
+    <!-- 	Start product image & Information -->
+
+    <div class="product-image">
+
+        <img src="https://sc01.alicdn.com/kf/HTB1Cic9HFXXXXbZXpXXq6xXFXXX3/200006212/HTB1Cic9HFXXXXbZXpXXq6xXFXXX3.jpg" alt="Omar Dsoky">
+
+        <!-- 	product Information-->
+        <div class="info">
+            <h2>Dad Info</h2>
+            <ul>
+                <p>Bio Here</p>
+            </ul>
+        </div>
+    </div>
+    <!--  End product image  -->
+
+
+</div>
+
+
+
 </body>
 </html>
