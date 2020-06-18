@@ -14,6 +14,8 @@ public interface Ads {
 
     Ad deleteAd(long id);
 
+    List<Ad> adByID(long id);
+
 //    void update(Ad ad); // update an existing record
 //    void destroy(Ad ad); // remove a record
 }

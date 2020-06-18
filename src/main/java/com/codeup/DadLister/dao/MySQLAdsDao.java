@@ -1,7 +1,6 @@
 package com.codeup.DadLister.dao;
 
 import com.codeup.DadLister.models.Ad;
-import com.mysql.cj.api.mysqla.result.Resultset;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
@@ -77,22 +76,38 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public Ad deleteAd(long id) {
-        PreparedStatement stmt = null;
-        long adId = id;
         try {
-            stmt = connection.prepareStatement("DELETE FROM ads WHERE id = ?");
-            stmt.setLong(1, adId);
-            ResultSet rs = stmt.executeQuery();
-            rs.next();
-            return new Ad(
-                    rs.getLong("id"),
-                    rs.getLong("user_id"),
-                    rs.getString("title"),
-                    rs.getString("description")
-            );
+            String deleteQuery = "delete from ads where id = ?";
+
+            PreparedStatement stmt = connection.prepareStatement(deleteQuery, Statement.RETURN_GENERATED_KEYS);
+
+            stmt.setLong(1, id);
+
+            stmt.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException("Error retrieving the ad.", e);
+            throw new RuntimeException("Unable to delete ad");
         }
+//        long adId = id;
+//        try {
+//            stmt = connection.prepareStatement("DELETE FROM ads WHERE id = ?");
+//            stmt.setLong(1, adId);
+//            ResultSet rs = stmt.executeQuery();
+//            rs.next();
+//            return new Ad(
+//                    rs.getLong("id"),
+//                    rs.getLong("user_id"),
+//                    rs.getString("title"),
+//                    rs.getString("description")
+//            );
+//        } catch (SQLException e) {
+//            throw new RuntimeException("Error retrieving the ad.", e);
+//        }
+        return null;
+    }
+
+    @Override
+    public List<Ad> adByID(long id) {
+        return null;
     }
 
 

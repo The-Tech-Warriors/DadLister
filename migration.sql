@@ -49,3 +49,13 @@ CREATE TABLE ads_category (
 INSERT INTO category (name) VALUES ('help'), ('motor'), ('bbq'), ('wisdom'), ('sports'), ('tuff');
 
 select * from ads_category where category_id = 1;
+
+# need to use?
+ALTER TABLE `ads_category`
+    ADD CONSTRAINT `ads_category._ibfk_1` FOREIGN KEY (`ads_id`)
+        REFERENCES `ads` (`id`);
+
+# can be put in one method with 2 sql statements
+delete from ads_category where ads_id = 5;
+
+delete from ads where id = 5;
