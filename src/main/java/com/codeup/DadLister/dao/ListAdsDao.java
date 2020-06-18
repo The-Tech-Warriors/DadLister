@@ -40,7 +40,16 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
+
     public List<Ad> findAdsForProfileByUserId(long profileId) {
+
+    public Ad deleteAd(long id) {
+        return null;
+    }
+
+    @Override
+    public List<Ad> adByID(long id) {
+
         return null;
     }
 

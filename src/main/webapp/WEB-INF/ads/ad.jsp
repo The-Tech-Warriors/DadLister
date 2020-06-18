@@ -13,9 +13,12 @@
 </head>
 <body>
 
-<h1>Test</h1>
+<h1>${ad.title}</h1>
 <c:out value="${ad.title}"/>
 <c:out value="${ad.description}"/>
+
+<p><a href="/edit-delete?daddy_id=${ad.id}">Edit or delete (d)Ad</a></p>
+<%--            <button type="submit">Edit or Delete (d)Ad</button>--%>
 
 </body>
 </html>
