@@ -7,7 +7,7 @@
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
-    <style><%@include file="/css/dadlister.css"%></style>
+    <style><%@include file="/css/register.css"%></style>
 
     <div class="container register-container">
         <h1>Please fill in your information.</h1>

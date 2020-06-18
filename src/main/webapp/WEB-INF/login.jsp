@@ -8,7 +8,8 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <style><%@include file="/css/dadlister.css"%></style>
+    <style><%@include file="/css/login.css"%></style>
+
     <div class="container login-container">
         <h1>Please Log In</h1>
         <form action="/login" method="POST">

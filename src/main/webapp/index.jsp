@@ -15,14 +15,15 @@
 
 
     <div class="container head-container text-center">
-        <h1>Welcome to the Dadlister!</h1>
+
+<%--        <h1>Welcome to Dadlister!</h1>--%>
 
 
         <form action="/register">
-            <a href="/register"><input type="submit" class="btn btn-light" value="Sign Me Up!"></a>
+            <a href="/register"><input type="submit" class="btn register-btn btn-light" value="Sign Me Up!"></a>
         </form>
         <form action="/login">
-            <a href="/login"><input type="submit" class="btn btn-light" value="Take me to my profile!"></a>
+            <a href="/login"><input type="submit" class="btn login-btn btn-light" value="Take me to my profile!"></a>
         </form>
 
     </div>

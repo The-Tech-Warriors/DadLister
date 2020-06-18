@@ -12,13 +12,66 @@
     <title>Dad Ad</title>
 </head>
 <body>
+<style><%@include file="/css/SingleAd.css"%></style>
 
 <h1>${ad.title}</h1>
 <c:out value="${ad.title}"/>
 <c:out value="${ad.description}"/>
 
+
+
+<%--Card--%>
+<div id="container">
+
+    <!-- Start	Product details -->
+    <div class="product-details">
+
+        <!-- 	Product Name -->
+        <h1> Dad Name</h1>
+
+        <!-- The most important information about the product -->
+        <p class="information">"AD INFO HERE</p>
+
+
+
+        <!-- 		Control -->
+        <div class="control">
+
+            <!-- Start Button buying -->
+            <button class="btn">
+                <span class="schedule">Schedule Now</span>
+            </button>
+            <!-- End Button buying -->
+
+        </div>
+
+    </div>
+
+
+    <!-- 	Start product image & Information -->
+
+    <div class="product-image">
+
+        <img src="/img/DadListerDad.png" alt="Omar Dsoky">
+
+        <!-- 	product Information-->
+        <div class="info">
+            <h2>Dad Info</h2>
+            <ul>
+                <p>Bio Here</p>
+            </ul>
+        </div>
+    </div>
+    <!--  End product image  -->
+
+
+</div>
+
+
+
 <p><a href="/edit-delete?daddy_id=${ad.id}">Edit or delete (d)Ad</a></p>
 <%--            <button type="submit">Edit or Delete (d)Ad</button>--%>
+
 
 </body>
 </html>

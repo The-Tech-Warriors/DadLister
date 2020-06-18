@@ -1,0 +1,31 @@
+body {
+    background-color: #c23e09;
+    background-image: url("/img/DadlisterImgsTransparent.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;;
+
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    margin-top: 222px;
+    margin-left: 372px;
+
+}
+
+.btn{
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.52) 2px 2px 2px 2px;
+}
+
+form {
+
+    margin-left: 372px;
+}
