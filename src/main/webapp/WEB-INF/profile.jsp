@@ -33,8 +33,12 @@
             </a>
 
             <div class="property-description">
-                <h5> Card Title </h5>
-                <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+                <h5> ${sessionScope.user.username} </h5>
+                <p>${sessionScope.user.email}</p>
+                <form action="/update-profile">
+                    <button>Edit Profile</button>
+                </form>
+
             </div>
         </div>
 
