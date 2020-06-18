@@ -49,7 +49,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setLong(1, catId);
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException("Error filtering Category.", e);
         }
     }
@@ -62,13 +62,13 @@ public class MySQLAdsDao implements Ads {
             stmt = connection.prepareStatement("SELECT * FROM ads WHERE id = ?");
             stmt.setLong(1, adId);
             ResultSet rs = stmt.executeQuery();
-                rs.next();
-                return new Ad(
-                        rs.getLong("id"),
-                        rs.getLong("user_id"),
-                        rs.getString("title"),
-                        rs.getString("description")
-                );
+            rs.next();
+            return new Ad(
+                    rs.getLong("id"),
+                    rs.getLong("user_id"),
+                    rs.getString("title"),
+                    rs.getString("description")
+            );
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving the ad.", e);
         }

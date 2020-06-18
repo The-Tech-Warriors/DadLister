@@ -11,6 +11,7 @@ public interface Ads {
     List<Ad> category(long id);
 
     Ad findOne(long id);
+
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
 

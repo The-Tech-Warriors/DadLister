@@ -8,5 +8,5 @@ public interface Categories {
 
     List<Category> All();
 
-    Long insert(Long ads_id ,Long category_id);
+    Long insert(Long ads_id, Long category_id);
 }

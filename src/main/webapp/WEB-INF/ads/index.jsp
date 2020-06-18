@@ -29,7 +29,7 @@
     </form>
 
 
-<%--  need to make conditionals that display what user selects  --%>
+    <%--  need to make conditionals that display what user selects  --%>
     <c:choose>
         <c:when test="${param.category == null}">
             <c:forEach var="ad" items="${ads}">
