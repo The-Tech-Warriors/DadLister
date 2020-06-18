@@ -8,13 +8,20 @@ public interface Ads {
     // get a list of all the ads
     List<Ad> all();
 
+    List<Ad> category(long id);
+
     Ad findOne(long id);
+
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
+
+
+    List<Ad> findAdsForProfileByUserId(long profileId);
 
     Ad deleteAd(long id);
 
     List<Ad> adByID(long id);
+
 
 //    void update(Ad ad); // update an existing record
 //    void destroy(Ad ad); // remove a record

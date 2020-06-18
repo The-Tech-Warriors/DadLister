@@ -36,6 +36,24 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public List<Ad> category(long id) {
+        PreparedStatement stmt = null;
+        long catId = id;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ads\n" +
+                    "    left join users u on ads.user_id = u.id\n" +
+                    "    left join ads_category ac on ads.id = ac.ads_id\n" +
+                    "    left join category c on ac.category_id = c.id\n" +
+                    "    WHERE category_id = ?");
+            stmt.setLong(1, catId);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error filtering Category.", e);
+        }
+    }
+
+    @Override
     public Ad findOne(long id) {
         PreparedStatement stmt = null;
         long adId = id;
@@ -43,15 +61,33 @@ public class MySQLAdsDao implements Ads {
             stmt = connection.prepareStatement("SELECT * FROM ads WHERE id = ?");
             stmt.setLong(1, adId);
             ResultSet rs = stmt.executeQuery();
-                rs.next();
-                return new Ad(
-                        rs.getLong("id"),
-                        rs.getLong("user_id"),
-                        rs.getString("title"),
-                        rs.getString("description")
-                );
+            rs.next();
+            return new Ad(
+                    rs.getLong("id"),
+                    rs.getLong("user_id"),
+                    rs.getString("title"),
+                    rs.getString("description")
+            );
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving the ad.", e);
+        }
+    }
+
+    //This is how we extract ads for the profile ads
+    public List<Ad> findAdsForProfileByUserId(long id) {
+        PreparedStatement stmt = null;
+        String query = "SELECT * FROM ads " +
+                " LEFT JOIN users AS s ON ads.user_id = s.id" +
+                " LEFT JOIN ads_category AS ac ON ac.ads_id = ads.id" +
+                " LEFT JOIN category AS cat ON ac.category_id = cat.id" +
+                " WHERE ads.user_id = ?";
+        try {
+            stmt = connection.prepareStatement(query);
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
 
