@@ -7,19 +7,19 @@
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <style><%@include file="/css/profile.css"%></style>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<style><%@include file="/css/profile.css"%></style>
 
-    <div class="container-fluid text-center create-container">
-        <h1>Welcome, ${sessionScope.user.username}!</h1>
+<div class="container-fluid text-center create-container">
+    <h1>Welcome, ${sessionScope.user.username}!</h1>
 
-        <form class="create-dad-btn text-center d-flex" action="/ads/create">
-            <input type="submit" class="btn create-btn" value="Create Ad">
-            <input type="submit" class="btn create-btn" value="Edit Ad">
-            <input type="submit" class="btn create-btn" value="Delete Ad">
-        </form>
+    <form class="create-dad-btn text-center d-flex" action="/ads/create">
+        <input type="submit" class="btn create-btn" value="Create Ad">
+        <input type="submit" class="btn create-btn" value="Edit Ad">
+        <input type="submit" class="btn create-btn" value="Delete Ad">
+    </form>
 
-<%--   profile card--%>
+    <%--   profile card--%>
 
     <div class="center">
 
@@ -32,10 +32,14 @@
                 </div>
             </a>
 
-             <div class="property-description">
-                    <h5> Card Title </h5>
-                    <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-                </div>
+            <div class="property-description">
+                <h5> ${sessionScope.user.username} </h5>
+                <p>${sessionScope.user.email}</p>
+                <form action="/update-profile">
+                    <button>Edit Profile</button>
+                </form>
+
+            </div>
         </div>
 
     </div>
@@ -45,42 +49,47 @@
 
 
 
-<%--ads card--%>
+    <%--ads card--%>
 
     <div class="ad-cards-container">
 
+        <c:forEach var="ad" items="${ads}">
             <div class="ads-card">
-                <h3 class="title">Dad Ad 1</h3>
+                <div class="title">
+                    <h2>${ad.title}</h2>
+                    <p>${ad.description}</p>
+                    <p><a href="/ads/ad?daddy_id=${ad.id}">View Ad</a></p>
+                </div>
                 <div class="bar">
                     <div class="emptybar"></div>
                     <div class="filledbar"></div>
                 </div>
             </div>
-            <div class="ads-card">
-                <h3 class="title">Dad Ad 2</h3>
-                <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                </div>
-            </div>
-            <div class="ads-card">
-                <h3 class="title">Dad Ad 3</h3>
-                <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                </div>
-            </div>
-            <div class="ads-card">
-                <h3 class="title">Dad Ad 4</h3>
-                <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                </div>
-            </div>
+        </c:forEach>
+        <%--            <div class="ads-card">--%>
+        <%--                <h3 class="title">Dad Ad 2</h3>--%>
+        <%--                <div class="bar">--%>
+        <%--                    <div class="emptybar"></div>--%>
+        <%--                    <div class="filledbar"></div>--%>
+        <%--                </div>--%>
+        <%--            </div>--%>
+        <%--            <div class="ads-card">--%>
+        <%--                <h3 class="title">Dad Ad 3</h3>--%>
+        <%--                <div class="bar">--%>
+        <%--                    <div class="emptybar"></div>--%>
+        <%--                    <div class="filledbar"></div>--%>
+        <%--                </div>--%>
+        <%--            </div>--%>
+        <%--            <div class="ads-card">--%>
+        <%--                <h3 class="title">Dad Ad 4</h3>--%>
+        <%--                <div class="bar">--%>
+        <%--                    <div class="emptybar"></div>--%>
+        <%--                    <div class="filledbar"></div>--%>
+        <%--                </div>--%>
+        <%--            </div>--%>
 
     </div>
-    </div>
-
+</div>
 
 </body>
 </html>

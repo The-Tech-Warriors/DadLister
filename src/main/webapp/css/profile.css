@@ -133,6 +133,11 @@ h1 {
     left: 0px;
 }
 
+.ads-card .title p {
+    margin-top: 45px;
+    font-size: 10px;
+}
+
 .ads-card:not(:first-child) {
     margin-left: -50px;
 }
@@ -151,8 +156,8 @@ h1 {
 .title {
     color: #000031;
     font-weight: 300;
-    position: absolute;
-    left: 20px;
+    position: relative;
+    left: 0px;
     top: 15px;
 }
 
