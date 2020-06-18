@@ -16,6 +16,13 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
+    public List<Ad> category(long id) {
+        List<Ad> ads = new ArrayList<>();
+        ads.add(new Ad(id));
+        return ads;
+    }
+
+    @Override
     public Ad findOne(long id) {
         return new Ad(id);
     }
