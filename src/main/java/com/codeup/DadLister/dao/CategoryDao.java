@@ -37,6 +37,11 @@ public class CategoryDao implements Categories {
         }
     }
 
+    @Override
+    public List<Category> category() {
+        return null;
+    }
+
     private Category extractCategory(ResultSet rs) throws SQLException {
         return new Category(
                 rs.getInt("id"),

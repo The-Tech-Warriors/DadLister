@@ -10,17 +10,21 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Edit or delete your add" />
+        <jsp:param name="title" value="Edit or delete your (d)Ad" />
     </jsp:include>
+
+    <style><%@include file="/css/dadlister.css"%></style>
 </head>
 <body>
+
+
 <form action="/edit-delete" method="post">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <html>
-<head>
-    <title>Edit or Delete Your (d)Ad</title>
-</head>
 <body>
+
+<h1>Edit or Delete Your (d)Ad</h1>
+<h1>${ad.title}</h1>
 <c:out value="${ad.title}"/>
 <c:out value="${ad.description}"/>
 </body>
