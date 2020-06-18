@@ -25,7 +25,12 @@
 
 <h1>Edit or Delete Your (d)Ad</h1>
 <h1>${ad.title}</h1>
+<p>
 <c:out value="${ad.title}"/>
 <c:out value="${ad.description}"/>
+</p>
+<br>
+<a href="${templink}" onclick="if (!(confirm('Are you sure you want to delete this student?'))) return false">Delete</a>
+<%--<button type="submit">Delete Post</button>--%>
 </body>
 </html>
