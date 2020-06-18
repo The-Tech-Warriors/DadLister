@@ -5,7 +5,7 @@ body {
 
 h1 {
     color: white;
-    margin-top: 60px;
+    margin-top: 85px;
 }
 
 
@@ -19,7 +19,7 @@ h1 {
 
 
 .create-dad-btn {
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 
@@ -30,9 +30,8 @@ h1 {
 .center
 {
     height:100vh;
-    width:100%;
-    margin-top: 20px;
-   margin-left: 100px;
+    width:100vh;
+    margin-left: 250px;
 
 }
 
@@ -65,7 +64,6 @@ h1 {
     width:20em;
     padding:1em 2em;
     position:Absolute;
-    top:0px;
     -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -82,7 +80,6 @@ h1 {
     height:20em;
     width:20em;
     position:absolute;
-    bottom:0em;
     -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -96,7 +93,7 @@ h1 {
 .property-card:hover .property-description
 {
     height:10em;
-    padding:0px 1em;
+    padding:0em 1em;
 }
 .property-card:hover .property-image
 {
@@ -115,7 +112,7 @@ h1 {
     height: 270px;
     width: 600px;
     top: 400px;
-    left: 600px;
+    left: 780px;
     display: flex;
     justify-content: center;
     align-items: end;
@@ -128,7 +125,7 @@ h1 {
     background-color: white;
     border-radius: 10px;
     box-shadow: -1rem 0 3rem #000;
-       margin-left: -50px;
+    /*margin-left: -50px;*/
     transition: 0.4s ease-out;
     position: relative;
     left: 0px;
