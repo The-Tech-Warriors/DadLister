@@ -6,6 +6,18 @@ h1 {
 color: white;
 }
 
+h2 {
+    color: lightgray;
+}
+
+p {
+    color: white;
+}
+
+a {
+    color: #000031;
+}
+
 .head-container {
 
     margin-top: 400px;
@@ -13,13 +25,12 @@ color: white;
 
 }
 .login-container {
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .register-container {
     margin-top: 200px;
 }
-
 
 
 .username {
@@ -38,6 +49,23 @@ color: white;
     color: white;
 }
 
+.title {
+    color: white;
+}
+
+.description {
+     color: white;
+ }
+
+.category {
+    color: white;
+}
+
+select#category {
+    color: #000031;
+    margin-left: 5px;
+}
+
 .btn{
     background: gray;
     color: white;
@@ -45,12 +73,5 @@ color: white;
     box-shadow: rgba(0, 0, 0, 0.52) 2px 2px 2px 2px;
 }
 
-.create-btn {
-   margin-top: 500px;
-}
 
-.card {
-    justify-content: center;
-    align-content: center;
-}
 
