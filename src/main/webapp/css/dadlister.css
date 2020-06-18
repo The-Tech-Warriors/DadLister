@@ -1,9 +1,10 @@
 body {
-    background: #c23e09;
-    background-image: url("../img/DadLister.png");
+   background-color: #c23e09;
 }
 h1 {
-color: white;
+    color: white;
+    font-size: 100px;
+
 }
 
 h2 {

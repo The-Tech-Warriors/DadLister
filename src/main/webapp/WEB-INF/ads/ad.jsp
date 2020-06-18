@@ -12,6 +12,7 @@
     <title>Dad Ad</title>
 </head>
 <body>
+<style><%@include file="/css/SingleAd.css"%></style>
 
 <h1>Test</h1>
 <c:out value="${ad.title}"/>

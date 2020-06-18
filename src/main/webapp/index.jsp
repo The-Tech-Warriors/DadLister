@@ -15,7 +15,7 @@
 
 
     <div class="container head-container text-center">
-        <h1>Welcome to the Dadlister!</h1>
+        <h1>Welcome to Dadlister!</h1>
 
 
         <form action="/register">

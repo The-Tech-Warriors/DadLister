@@ -1,0 +1,15 @@
+body {
+    background-image: linear-gradient(10turn, white  50%, #c23e09 50%);
+}
+h1 {
+    color: white;
+    font-size: 50px;
+
+}
+
+.btn{
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.52) 2px 2px 2px 2px;
+}
