@@ -66,4 +66,9 @@ public class CategoryDao implements Categories {
         }
         return null;
     }
+
+    @Override
+    public void deleteAd(long id) {
+
+    }
 }
