@@ -12,11 +12,12 @@
     <title>Dad Ad</title>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <style><%@include file="/css/SingleAd.css"%></style>
 
-<h1>${ad.title}</h1>
-<c:out value="${ad.title}"/>
-<c:out value="${ad.description}"/>
+<%--<h1>${ad.title}</h1>--%>
+<%--<c:out value="${ad.title}"/>--%>
+<%--<c:out value="${ad.description}"/>--%>
 
 
 
@@ -30,7 +31,8 @@
         <h1> Dad Name</h1>
 
         <!-- The most important information about the product -->
-        <p class="information">"AD INFO HERE</p>
+        <p class="information"><c:out value="${ad.title}"/></p>
+        <p class="information"><c:out value="${ad.description}"/></p>
 
 
 
