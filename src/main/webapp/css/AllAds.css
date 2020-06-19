@@ -97,7 +97,7 @@ a {
 .card__background{
     background-size: cover;
     background-position: center;
-    border-radius: var(--spacing-l);
+    /*border-radius: var(--spacing-l);*/
     bottom: 0;
     /*filter: brightness(0.75) saturate(1.2) contrast(0.85);*/
     left: 0;
@@ -109,6 +109,7 @@ a {
     transition:
             filter 200ms linear,
             transform 200ms linear;
+    box-shadow: rgba(0, 0, 0, 0.2) 15px 15px 15px;
 }
 
 .card:hover .card__background{
