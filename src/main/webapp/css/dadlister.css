@@ -87,13 +87,16 @@ select#category {
 }
 
 .register-btn {
+    display: block;
     bottom: 250px;
+    left: 825px;
 
 }
 
 .login-btn {
+    display: block;
     bottom: 190px;
-    left: 872px;
+    left: 800px;
 }
 
 
