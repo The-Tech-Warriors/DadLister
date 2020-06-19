@@ -6,7 +6,7 @@
     </jsp:include>
 </head>
 <body>
-<style><%@include file="/css/dadlister.css"%></style>
+<style><%@include file="/css/create.css"%></style>
 
     <div class="container create-container">
         <h1>Create a new Ad</h1>
@@ -29,8 +29,11 @@
                     <option value="5">Sport Stuff</option>
                     <option value="6">Tuff Stuff</option>
                 </select>
+                <div>
+                <input type="submit" class="btn btn-dark btn-block">
+                </div>
             </div>
-            <input type="submit" class="btn btn-block btn-primary">
+
         </form>
     </div>
 </body>
