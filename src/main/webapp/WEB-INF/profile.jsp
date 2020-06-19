@@ -15,8 +15,7 @@
 
     <form class="create-dad-btn text-center d-flex" action="/ads/create">
         <input type="submit" class="btn create-btn" value="Create Ad">
-        <input type="submit" class="btn create-btn" value="Edit Ad">
-        <input type="submit" class="btn create-btn" value="Delete Ad">
+
     </form>
 
     <%--   profile card--%>
@@ -59,6 +58,8 @@
                     <h2>${ad.title}</h2>
                     <p>${ad.description}</p>
                     <p><a href="/ads/ad?daddy_id=${ad.id}">View Ad</a></p>
+                    <input type="submit" class="btn edit-btn" value="Edit">
+                    <input type="submit" class="btn delete-btn" value="Delete">
                 </div>
                 <div class="bar">
                     <div class="emptybar"></div>

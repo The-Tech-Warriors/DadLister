@@ -88,12 +88,14 @@ select#category {
 
 .register-btn {
     display: block;
+    position: fixed;
     bottom: 250px;
-    left: 825px;
+    left: 828px;
 
 }
 
 .login-btn {
+    position: fixed;
     display: block;
     bottom: 190px;
     left: 800px;
