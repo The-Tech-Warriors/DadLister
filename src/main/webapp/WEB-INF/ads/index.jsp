@@ -8,8 +8,10 @@
 </head>
 <body>
 
-<jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<style><%@include file="/css/AllAds.css"%></style>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
+<style>
+    <%@include file="/css/AllAds.css" %>
+</style>
 
 
 <div class="container">
@@ -35,22 +37,37 @@
     <%--  need to make conditionals that display what user selects  --%>
     <c:choose>
         <c:when test="${param.category == null}">
-            <c:forEach var="ad" items="${ads}">
-                <div class="col-md-6">
-                    <h2>${ad.title}</h2>
-                    <p>${ad.description}</p>
-                    <p><a href="/ads/ad?daddy_id=${ad.id}">View Ad</a></p>
+            <div class="hero-section">
+                <div class="card-grid">
+                    <c:forEach var="ad" items="${ads}">
+                        <a href="/ads/ad?daddy_id=${ad.id}" class="card">
+                            <div class="card__background" style="background-image: url(/img/dad.png)"></div>
+                            <div class="card__content">
+                                <p class="card__category">Category</p>
+                                <h3 class="card__heading">${ad.title}</h3>
+                                <p>${ad.description}</p>
+                            </div>
+                        </a>
+                    </c:forEach>
                 </div>
-            </c:forEach>
+            </div>
         </c:when>
         <c:when test="${param.category == param.category}">
-            <c:forEach var="cat" items="${category}">
-                <div class="col-md-6">
-                    <h2>${cat.title}</h2>
-                    <p>${cat.description}</p>
-                    <p><a href="/ads/ad?daddy_id=${cat.id}">View Ad</a></p>
+            <div class="hero-section">
+                <div class="card-grid">
+                    <c:forEach var="cat" items="${category}">
+                        <a href="/ads/ad?daddy_id=${cat.id}" class="card">
+                            <div class="card__background" style="background-image: url(/img/dad.png)"></div>
+                            <div class="card__content">
+                                <p class="card__category">Category</p>
+                                <h3 class="card__heading">${cat.title}</h3>
+                                <p>${cat.description}</p>
+
+                            </div>
+                        </a>
+                    </c:forEach>
                 </div>
-            </c:forEach>
+            </div>
         </c:when>
         <c:otherwise>
             ${"No Match!"}
@@ -60,77 +77,74 @@
 </div>
 
 
-
 <%--ALL ADS PAGE --CARDS--%>
-<div  class="hero-section">
-    <div class="card-grid">
-        <a class="card" href="#">
-            <div class="card__background" style="background-image: url(/img/2.png)"></div>
-            <div class="card__content">
-                <p class="card__category">Category</p>
-                <h3 class="card__heading">Example Card Heading</h3>
-            </div>
-        </a>
-        <a class="card" href="#">
-            <div class="card__background" style="background-image: url(/img/3.png)"></div>
-            <div class="card__content">
-                <p class="card__category">Category</p>
-                <h3 class="card__heading">Example Card Heading</h3>
-            </div>
-        </a>
-        <a class="card" href="#">
-            <div class="card__background" style="background-image: url(/img/4.png)"></div>
-            <div class="card__content">
-                <p class="card__category">Category</p>
-                <h3 class="card__heading">Example Card Heading</h3>
-            </div>
-        </a>
-            </li>
-            <a class="card" href="#">
-                <div class="card__background" style="background-image: url(/img/5.png)"></div>
-                <div class="card__content">
-                    <p class="card__category">Category</p>
-                    <h3 class="card__heading">Example Card Heading</h3>
-                </div>
-            </a>
-    </div>
-</div>
+<%--<div class="hero-section">--%>
+<%--    <div class="card-grid">--%>
+<%--        <a class="card" href="#">--%>
+<%--            <div class="card__background" style="background-image: url(/img/2.png)"></div>--%>
+<%--            <div class="card__content">--%>
+<%--                <p class="card__category">Category</p>--%>
+<%--                <h3 class="card__heading">Example Card Heading</h3>--%>
+<%--            </div>--%>
+<%--        </a>--%>
+<%--        <a class="card" href="#">--%>
+<%--            <div class="card__background" style="background-image: url(/img/3.png)"></div>--%>
+<%--            <div class="card__content">--%>
+<%--                <p class="card__category">Category</p>--%>
+<%--                <h3 class="card__heading">Example Card Heading</h3>--%>
+<%--            </div>--%>
+<%--        </a>--%>
+<%--        <a class="card" href="#">--%>
+<%--            <div class="card__background" style="background-image: url(/img/4.png)"></div>--%>
+<%--            <div class="card__content">--%>
+<%--                <p class="card__category">Category</p>--%>
+<%--                <h3 class="card__heading">Example Card Heading</h3>--%>
+<%--            </div>--%>
+<%--        </a>--%>
+<%--        </li>--%>
+<%--        <a class="card" href="#">--%>
+<%--            <div class="card__background" style="background-image: url(/img/5.png)"></div>--%>
+<%--            <div class="card__content">--%>
+<%--                <p class="card__category">Category</p>--%>
+<%--                <h3 class="card__heading">Example Card Heading</h3>--%>
+<%--            </div>--%>
+<%--        </a>--%>
+<%--    </div>--%>
+<%--</div>--%>
 
-<div  class="hero-section">
-    <div class="card-grid">
-        <a class="card" href="#">
-            <div class="card__background" style="background-image: url(/img/2.png)"></div>
-            <div class="card__content">
-                <p class="card__category">Category</p>
-                <h3 class="card__heading">Example Card Heading</h3>
-            </div>
-        </a>
-        <a class="card" href="#">
-            <div class="card__background" style="background-image: url(/img/3.png)"></div>
-            <div class="card__content">
-                <p class="card__category">Category</p>
-                <h3 class="card__heading">Example Card Heading</h3>
-            </div>
-        </a>
-        <a class="card" href="#">
-            <div class="card__background" style="background-image: url(/img/4.png)"></div>
-            <div class="card__content">
-                <p class="card__category">Category</p>
-                <h3 class="card__heading">Example Card Heading</h3>
-            </div>
-        </a>
-        </li>
-        <a class="card" href="#">
-            <div class="card__background" style="background-image: url(/img/5.png)"></div>
-            <div class="card__content">
-                <p class="card__category">Category</p>
-                <h3 class="card__heading">Example Card Heading</h3>
-            </div>
-        </a>
-    </div>
-</div>
-
-
+<%--<div class="hero-section">--%>
+<%--    <div class="card-grid">--%>
+<%--        <a class="card" href="#">--%>
+<%--            <div class="card__background" style="background-image: url(/img/2.png)"></div>--%>
+<%--            <div class="card__content">--%>
+<%--                <p class="card__category">Category</p>--%>
+<%--                <h3 class="card__heading">Example Card Heading</h3>--%>
+<%--            </div>--%>
+<%--        </a>--%>
+<%--        <a class="card" href="#">--%>
+<%--            <div class="card__background" style="background-image: url(/img/3.png)"></div>--%>
+<%--            <div class="card__content">--%>
+<%--                <p class="card__category">Category</p>--%>
+<%--                <h3 class="card__heading">Example Card Heading</h3>--%>
+<%--            </div>--%>
+<%--        </a>--%>
+<%--        <a class="card" href="#">--%>
+<%--            <div class="card__background" style="background-image: url(/img/4.png)"></div>--%>
+<%--            <div class="card__content">--%>
+<%--                <p class="card__category">Category</p>--%>
+<%--                <h3 class="card__heading">Example Card Heading</h3>--%>
+<%--            </div>--%>
+<%--        </a>--%>
+<%--        </li>--%>
+<%--        <a class="card" href="#">--%>
+<%--            <div class="card__background" style="background-image: url(/img/5.png)"></div>--%>
+<%--            <div class="card__content">--%>
+<%--                <p class="card__category">Category</p>--%>
+<%--                <h3 class="card__heading">Example Card Heading</h3>--%>
+<%--            </div>--%>
+<%--        </a>--%>
+<%--    </div>--%>
+<%--</div>--%>
 
 
 </body>
