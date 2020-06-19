@@ -36,14 +36,17 @@ public class MySQLUsersDao implements Users {
 
 
     @Override
-    public User findByUserIdToUpdate(String username) {
-        String query = "SELECT * FROM users WHERE username = ? LIMIT 1";
+    public Long findByUserIdToUpdate(long id, String username, String email) {
+        String query = "UPDATE users SET username = ?, email = ? WHERE id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, username);
-            return extractUser(stmt.executeQuery());
+            stmt.setString(2, email);
+            stmt.setLong(3, id);
+            stmt.executeUpdate();
+            return 0L;
         } catch (SQLException e) {
-            throw new RuntimeException("Error finding a user by username", e);
+            throw new RuntimeException("Error creating new user", e);
         }
     }
 

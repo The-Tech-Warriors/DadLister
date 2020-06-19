@@ -74,3 +74,4 @@ delete from ads_category where ads_id = 5;
 
 delete from ads where id = 5;
 
+# Edit profile
