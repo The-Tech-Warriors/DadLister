@@ -9,8 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-
 import static java.lang.Long.parseLong;
+
+
 @WebServlet(name = "controllers.DeleteAdServlet", urlPatterns = "/edit-delete")
 public class DeleteAdsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -29,8 +30,8 @@ public class DeleteAdsServlet extends HttpServlet {
 
 
         protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-            long id = Long.parseLong(request.getParameter("daddy_id"));
-            DaoFactory.getCategoryDao().deleteAd(id);
+            long daddy_id = Long.parseLong(request.getParameter("id"));
+            DaoFactory.getAdsDao().deleteAd(daddy_id);
             response.sendRedirect("/ads");
         }
 

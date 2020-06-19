@@ -58,7 +58,7 @@ public class CategoryDao implements Categories {
     }
 
     @Override
-    public Long insert(Long ads_id , Long category_id) {
+    public Long insert(Long ads_id, Long category_id) {
         try {
             String insertQuery = "INSERT INTO ads_category(ads_id, category_id) VALUES (?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
@@ -77,3 +77,4 @@ public class CategoryDao implements Categories {
 
     }
 }
+

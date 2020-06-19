@@ -12,8 +12,12 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Edit or delete your (d)Ad" />
     </jsp:include>
-
-    <style><%@include file="/css/dadlister.css"%></style>
+<%--    Embedded Style   --%>
+    <style>
+        body {background-color: #c23e09;
+        color: white;
+        text-align: center}
+    </style>
 </head>
 <body>
 
@@ -26,12 +30,17 @@
 <h1>Edit or Delete Your (d)Ad</h1>
 <h1>${ad.title}</h1>
 <p>
-<c:out value="${ad.title}"/>
+<%--<c:out value="${ad.title}"/>--%>
 <c:out value="${ad.description}"/>
 </p>
 <br>
-<%--<a href="${deletelink}">Delete</a>--%>
-<a href="${templink}" onclick="if (!(confirm('Are you sure you want to delete this student?'))) return false">Delete</a>
-<%--<button type="submit">Delete Post</button>--%>
+
+<form action="/edit-delete" method="post">
+
+    <input type="hidden" value="${ad.id}">
+<button type="submit" onclick="if (!(confirm('Are you sure you want to delete this (d)Ad?'))) return false">Delete Post</button>
+
+</form>
+
 </body>
 </html>

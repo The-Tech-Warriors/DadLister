@@ -115,6 +115,7 @@ public class MySQLAdsDao implements Ads {
         try {
             long deleteID = Long.parseLong("daddy_id");
             String deleteQuery = "delete from ads_category where id = ?";
+            System.out.println("I am trying");
 
             PreparedStatement stmt = connection.prepareStatement(deleteQuery, Statement.RETURN_GENERATED_KEYS);
 
