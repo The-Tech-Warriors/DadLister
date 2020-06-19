@@ -34,6 +34,22 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+
+    @Override
+    public Long findByUserIdToUpdate(long id, String username, String email) {
+        String query = "UPDATE users SET username = ?, email = ? WHERE id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, username);
+            stmt.setString(2, email);
+            stmt.setLong(3, id);
+            stmt.executeUpdate();
+            return 0L;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating new user", e);
+        }
+    }
+
     @Override
     public Long insert(User user) {
         String query = "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";

@@ -35,10 +35,7 @@
             <div class="property-description">
                 <h5> ${sessionScope.user.username} </h5>
                 <p>${sessionScope.user.email}</p>
-                <form action="/update-profile">
-                    <button>Edit Profile</button>
-                </form>
-
+                <a href="/update-profile">Edit Profile</a>
             </div>
         </div>
 
